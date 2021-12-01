@@ -15,6 +15,9 @@ public class TriangleCreator {
         double fourthArg = Double.parseDouble(numbers[3]);
         double fifthArg = Double.parseDouble(numbers[4]);
         double sixthArg = Double.parseDouble(numbers[5]);
-        return new Triangle(new Point(firstArg, secondArg), new Point(thirdArg, fourthArg), new Point(fifthArg, sixthArg));
+        Point firstP = new Point(firstArg, secondArg);
+        Point secondP = new Point(thirdArg, fourthArg);
+        Point thirdP = new Point(fifthArg, sixthArg);
+        return new Triangle(firstP, secondP, thirdP);
     }
 }

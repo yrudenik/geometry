@@ -1,7 +1,5 @@
 package com.epam.training.data;
 
-import com.epam.training.data.DataException;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
