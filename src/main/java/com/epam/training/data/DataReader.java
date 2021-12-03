@@ -10,7 +10,7 @@ import java.util.List;
 public class DataReader {
 
     public List<String> read(String filePath) throws DataException {
-        List<String> lines = new ArrayList<String>();
+        List<String> lines = new ArrayList<>();
         try {
             BufferedReader buffReader = new BufferedReader(new FileReader(filePath));
             String line = buffReader.readLine();

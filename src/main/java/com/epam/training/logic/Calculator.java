@@ -70,21 +70,5 @@ public class Calculator {
         }
         return "Triangle does not exist";
     }
-
-    public boolean isPointsInOneLine(Triangle triangle) {
-        double xOne = triangle.getFirstPoint().getxCoord();
-        double yOne = triangle.getFirstPoint().getyCoord();
-        double xTwo = triangle.getSecondPoint().getxCoord();
-        double yTwo = triangle.getSecondPoint().getyCoord();
-        double xThree = triangle.getThirdPoint().getxCoord();
-        double yThree = triangle.getThirdPoint().getyCoord();
-        double legOne = Math.sqrt((xTwo-xOne)*(xTwo-xOne)+(yTwo-yOne)*(yTwo-yOne));
-        double legTwo = Math.sqrt((xThree-xTwo)*(xThree-xTwo)+(yThree-yTwo)*(yThree-yTwo));
-        double legThree = Math.sqrt((xOne-xThree)*(xOne-xThree)+(yOne-yThree)*(yOne-yThree));
-        if ( (xThree-xOne)*(yTwo-yOne)-(yThree-yOne)*(xTwo-xOne) == 0 ){
-            return true;
-        }
-        return false;
-    }
 }
 

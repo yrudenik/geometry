@@ -71,22 +71,4 @@ public class CalculatorTest {
         //then
         Assert.assertEquals("Triangle is isosceles", result);
     }
-
-    @Test
-    public void testCheckPointsShouldCheckIsPointsInOneLineWhenPointsAreIdentified(){
-        //given
-        Calculator calculator = new Calculator();
-        Point firstP = new Point(1.0, 1.0);
-        Point secondP = new Point(2.0, 2.0);
-        Point thirdP = new Point(5.0, 5.0);
-        Triangle triangle = new Triangle(firstP, secondP, thirdP);
-
-        //when
-        boolean result = calculator.isPointsInOneLine(triangle);
-
-        //then
-        Assert.assertEquals(true, result);
-    }
-
-
 }

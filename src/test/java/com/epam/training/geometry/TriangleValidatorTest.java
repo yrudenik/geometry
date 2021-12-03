@@ -30,4 +30,17 @@ public class TriangleValidatorTest {
         //then
         Assert.assertEquals(false, resultValidotor);
     }
+
+        @Test
+    public void testIsValidPointsShouldCheckIsPointsFormTriangleWhenValid(){
+        //given
+        TriangleValidator validator = new TriangleValidator();
+        String line = "2.0 1.0 2.0 2.0 5.0 5.0";
+
+        //when
+        boolean result = validator.isPointsFormTriangle(line);
+
+        //then
+        Assert.assertEquals(true, result);
+    }
 }

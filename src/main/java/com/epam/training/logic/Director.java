@@ -22,14 +22,14 @@ public class Director {
     }
 
     List<Triangle> read(String filePath) throws DataException {
-        List<Triangle> triangles = new ArrayList<Triangle>();
+        List<Triangle> triangles = new ArrayList<>();
         List<String> lines = dataReader.read(filePath);
         for (String line : lines) {
-            if (validator.isValid(line)) {
+            if (validator.isValid(line) && validator.isPointsFormTriangle(line)) {
                 Triangle triangle = creator.create(line);
                 triangles.add(triangle);
+                }
             }
-        }
         return triangles;
     }
 }
