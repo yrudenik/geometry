@@ -2,12 +2,9 @@ package com.epam.training.geometry;
 
 public class Triangle {
 
-    private final Point firstPoint;
-    private final Point secondPoint;
-    private final Point thirdPoint;
-/*    private double firstLeg;
-    private double secondLeg;
-    private double thirdLeg;*/
+    private Point firstPoint;
+    private Point secondPoint;
+    private Point thirdPoint;
 
         public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint){
         this.firstPoint = firstPoint;
@@ -25,6 +22,18 @@ public class Triangle {
 
     public Point getThirdPoint() {
             return thirdPoint;
+    }
+
+    public void setFirstPoint(Point firstPoint) {
+        this.firstPoint = firstPoint;
+    }
+
+    public void setSecondPoint(Point secondPoint) {
+        this.secondPoint = secondPoint;
+    }
+
+    public void setThirdPoint(Point thirdPoint) {
+        this.thirdPoint = thirdPoint;
     }
 
     @Override
@@ -48,8 +57,5 @@ public class Triangle {
         result = prime * result + thirdPoint.hashCode();
         return result;
     }
-
-
-
 }
 

@@ -1,6 +1,6 @@
 package com.epam.training.geometry;
 
-public class Point {
+public final class Point {
 
     private final double xCoord;
     private final double yCoord;

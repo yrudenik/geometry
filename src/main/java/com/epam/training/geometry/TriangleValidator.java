@@ -9,19 +9,6 @@ public class TriangleValidator {
         return line.matches(TRIANGLE_CREATE_FORMAT);
     }
 
-/*    public boolean isPointsFormTriangle(Triangle triangle) {
-        double xOne = triangle.getFirstPoint().getxCoord();
-        double yOne = triangle.getFirstPoint().getyCoord();
-        double xTwo = triangle.getSecondPoint().getxCoord();
-        double yTwo = triangle.getSecondPoint().getyCoord();
-        double xThree = triangle.getThirdPoint().getxCoord();
-        double yThree = triangle.getThirdPoint().getyCoord();
-        if ( (xThree-xOne)*(yTwo-yOne)-(yThree-yOne)*(xTwo-xOne) == 0 ){
-            return false;
-        }
-        return true;
-    }*/
-
     public boolean isPointsFormTriangle(String line) {
         String[] numbers = line.split(DELIMITER);
         double xOne = Double.parseDouble(numbers[0]);

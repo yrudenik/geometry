@@ -1,8 +1,5 @@
 package com.epam.training.geometry;
 
-import com.epam.training.geometry.Point;
-import com.epam.training.geometry.Triangle;
-
 public class TriangleCreator {
 
     private static final String DELIMITER=" ";
