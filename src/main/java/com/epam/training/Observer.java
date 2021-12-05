@@ -2,7 +2,7 @@ package com.epam.training;
 
 public interface Observer {
 
-    void update (TriangleObservable triangle); // triangle
+    void update (TriangleObservable triangle);
 
 
 
