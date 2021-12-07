@@ -7,7 +7,7 @@ import java.util.*;
 
 public class TriangleRepositoryImpl implements TriangleRepository {
 
-    private Map<Integer, TriangleObservable> store = new HashMap<>();
+    private final Map<Integer, TriangleObservable> store = new HashMap<>();
 
     public void add(Triangle triangle) {
     }

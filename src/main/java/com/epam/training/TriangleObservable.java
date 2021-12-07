@@ -26,7 +26,6 @@ public class TriangleObservable extends Triangle implements Observable {
         notifyObservers();
     }
 
-
     @Override
     public void attach(Observer observer) {
         observers.add(observer);
@@ -35,11 +34,12 @@ public class TriangleObservable extends Triangle implements Observable {
     @Override
     public void detach(Observer observer) {
         observers.remove(observer);
-
     }
 
     @Override
     public void notifyObservers() {
-
+        for (Observer observer : observers){
+            observer.update(this);
+        }
     }
 }
