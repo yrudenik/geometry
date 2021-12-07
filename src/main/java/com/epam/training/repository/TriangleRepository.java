@@ -8,8 +8,8 @@ import java.util.List;
 public interface TriangleRepository {
 
     void add(TriangleObservable triangle);
-    void delete (TriangleObservable triangle);
-    void update (TriangleObservable triangle);
+    void delete(TriangleObservable triangle);
+    void update(TriangleObservable triangle);
 
     List<TriangleObservable> query(Specification specification);
 

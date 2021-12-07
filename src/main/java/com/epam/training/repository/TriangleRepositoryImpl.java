@@ -1,6 +1,7 @@
 package com.epam.training.repository;
 
 import com.epam.training.TriangleObservable;
+import com.epam.training.comparators.IdComparator;
 import com.epam.training.geometry.Triangle;
 
 import java.util.*;
@@ -38,4 +39,11 @@ public class TriangleRepositoryImpl implements TriangleRepository {
     public List<TriangleObservable> sort(Comparator<TriangleObservable> comparator) {
         return null;
     }
+/*    ArrayList<Integer> newList = new ArrayList<Integer>(parameters.keySet());
+    IdComparator idComparator = new IdComparator();
+    newList.*/
+
+
+
+
 }
