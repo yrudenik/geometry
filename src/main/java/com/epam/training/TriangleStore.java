@@ -1,11 +1,8 @@
 package com.epam.training;
 
-import com.epam.training.comparators.IdComparator;
 import com.epam.training.logic.Calculator;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class TriangleStore implements Observer {

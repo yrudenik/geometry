@@ -1,4 +1,4 @@
-package com.epam.training.comparators;
+package com.epam.training.comparator;
 
 import com.epam.training.TriangleObservable;
 import com.epam.training.logic.Calculator;
