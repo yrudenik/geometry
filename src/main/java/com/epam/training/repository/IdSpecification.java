@@ -1,6 +1,6 @@
 package com.epam.training.repository;
 
-import com.epam.training.TriangleObservable;
+import com.epam.training.TriangleIdentifiable;
 
 public class IdSpecification implements Specification {
 
@@ -11,7 +11,7 @@ public class IdSpecification implements Specification {
     }
 
     @Override
-    public boolean specified(final TriangleObservable triangle) {
+    public boolean specified(final TriangleIdentifiable triangle) {
         return triangle.getId().equals(id);
     }
 }

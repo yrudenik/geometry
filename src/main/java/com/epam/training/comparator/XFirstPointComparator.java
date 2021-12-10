@@ -1,13 +1,13 @@
 package com.epam.training.comparator;
 
-import com.epam.training.TriangleObservable;
+import com.epam.training.TriangleIdentifiable;
 
 import java.util.Comparator;
 
-public class XFirstPointComparator implements Comparator<TriangleObservable> {
+public class XFirstPointComparator implements Comparator<TriangleIdentifiable> {
 
     @Override
-    public int compare(TriangleObservable o1, TriangleObservable o2) {
+    public int compare(TriangleIdentifiable o1, TriangleIdentifiable o2) {
         if (o1.getFirstPoint().getxCoord() == o2.getFirstPoint().getxCoord()) {
             return 0;
         }

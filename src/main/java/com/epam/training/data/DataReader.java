@@ -23,13 +23,6 @@ public class DataReader {
         } catch (IOException e) {
             throw new DataException("Incorrect information", e);
         }
-/*        finally {
-            try {
-                buffReader.close();
-            } catch (IOException e) {
-                //LOGGER.warn(e.setMessage().e;
-            }
-        }*/
         return lines;
     }
 }

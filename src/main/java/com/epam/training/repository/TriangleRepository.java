@@ -1,18 +1,18 @@
 package com.epam.training.repository;
 
-import com.epam.training.TriangleObservable;
+import com.epam.training.TriangleIdentifiable;
 
 import java.util.Comparator;
 import java.util.List;
 
 public interface TriangleRepository {
 
-    void add(TriangleObservable triangle);
-    void delete(TriangleObservable triangle);
-    void update(TriangleObservable triangle);
+    void add(TriangleIdentifiable triangle);
+    void delete(TriangleIdentifiable triangle);
+    void update(TriangleIdentifiable triangle);
 
-    List<TriangleObservable> query(Specification specification);
+    List<TriangleIdentifiable> query(Specification specification);
 
-    List<TriangleObservable> sort(Comparator<TriangleObservable> comparator);
+    List<TriangleIdentifiable> sort(Comparator<TriangleIdentifiable> comparator);
     
 }

@@ -1,8 +1,8 @@
 package com.epam.training.repository;
 
-import com.epam.training.TriangleObservable;
+import com.epam.training.TriangleIdentifiable;
 
 public interface Specification {
 
-    boolean specified(TriangleObservable triangle);
+    boolean specified(TriangleIdentifiable triangle);
 }

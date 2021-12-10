@@ -6,22 +6,22 @@ public class Triangle {
     private Point secondPoint;
     private Point thirdPoint;
 
-        public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint){
+    public Triangle(Point firstPoint, Point secondPoint, Point thirdPoint) {
         this.firstPoint = firstPoint;
         this.secondPoint = secondPoint;
         this.thirdPoint = thirdPoint;
     }
 
     public Point getFirstPoint() {
-            return firstPoint;
+        return firstPoint;
     }
 
     public Point getSecondPoint() {
-            return secondPoint;
+        return secondPoint;
     }
 
     public Point getThirdPoint() {
-            return thirdPoint;
+        return thirdPoint;
     }
 
     public void setFirstPoint(Point firstPoint) {
@@ -51,7 +51,7 @@ public class Triangle {
     @Override
     public int hashCode() {
         final int prime = 31;
-        int result = 3;
+        int result = 17;
         result = prime * result + firstPoint.hashCode();
         result = prime * result + secondPoint.hashCode();
         result = prime * result + thirdPoint.hashCode();

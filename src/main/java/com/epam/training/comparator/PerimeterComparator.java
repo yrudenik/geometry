@@ -1,16 +1,16 @@
 package com.epam.training.comparator;
 
-import com.epam.training.TriangleObservable;
+import com.epam.training.TriangleIdentifiable;
 import com.epam.training.logic.Calculator;
 
 import java.util.Comparator;
 
-public class PerimeterComparator implements Comparator<TriangleObservable> {
+public class PerimeterComparator implements Comparator<TriangleIdentifiable> {
 
     private final Calculator calculator = new Calculator();
 
     @Override
-    public int compare(TriangleObservable o1, TriangleObservable o2) {
+    public int compare(TriangleIdentifiable o1, TriangleIdentifiable o2) {
         if (calculator.calculatePerimeter(o1) == calculator.calculatePerimeter(o2)) {
             return 0;
         }

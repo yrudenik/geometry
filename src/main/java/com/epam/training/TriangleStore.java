@@ -1,11 +1,15 @@
 package com.epam.training;
 
 import com.epam.training.logic.Calculator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class TriangleStore implements Observer {
+
+    private static final Logger LOGGER = LogManager.getLogger();
 
     private static TriangleStore instance;
 
@@ -16,12 +20,10 @@ public class TriangleStore implements Observer {
     private TriangleStore() {
     }
 
-    public void update(TriangleObservable triangle) {
-        System.out.println("perimeter, area changed");
+    public void update(TriangleIdentifiable triangle) {
+        LOGGER.info("Triangle has been changed");
         double perimeter = calculator.calculatePerimeter(triangle);
-        System.out.println("perimeter = " + perimeter);
         double area = calculator.calculateArea(triangle);
-        System.out.println("area = " + area);
         parameters.put(triangle.getId(), new Parameters(perimeter, area));
     }
 
@@ -30,6 +32,10 @@ public class TriangleStore implements Observer {
             instance = new TriangleStore();
         }
         return instance;
+    }
+
+    public Map<Integer, Parameters> getParameters() {
+        return parameters;
     }
 }
 

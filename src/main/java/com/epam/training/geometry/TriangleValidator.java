@@ -2,7 +2,7 @@ package com.epam.training.geometry;
 
 public class TriangleValidator {
 
-    public static final String TRIANGLE_CREATE_FORMAT = "^\\s*((-)?\\d+\\.\\d+\\s+){5}(-)?\\d+\\.\\d+\\s*$";
+    private static final String TRIANGLE_CREATE_FORMAT = "^\\s*((-)?\\d+\\.\\d+\\s+){5}(-)?\\d+\\.\\d+\\s*$";
     private static final String DELIMITER=" ";
 
     public boolean isValid (String line){

@@ -33,7 +33,7 @@ public final class Point {
     @Override
     public int hashCode() {
         final int prime = 31;
-        int result = 3;
+        int result = 17;
         result = prime * result + (int) xCoord;
         result = prime * result + (int) yCoord;
         return result;

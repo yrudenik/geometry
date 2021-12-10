@@ -7,6 +7,8 @@ import org.junit.Test;
 
 public class CalculatorTest {
 
+    private static final double DELTA = 0.0001;
+
     @Test
     public void testCalculatePerimeterShouldCalculatePerWhenTriangleIsValid(){
         //given
@@ -20,8 +22,7 @@ public class CalculatorTest {
         double result = calculator.calculatePerimeter(triangle);
 
         //then
-        //Assert.assertEquals(Double.doubleToLongBits(12.0), Double.doubleToLongBits(result));
-        Assert.assertEquals(12.0, result, 0.000001);
+        Assert.assertEquals(12.0, result, DELTA);
     }
 
     @Test
@@ -37,7 +38,7 @@ public class CalculatorTest {
         double result = calculator.calculateArea(triangle);
 
         //then
-        Assert.assertEquals(6.0, result, 0.000001);
+        Assert.assertEquals(6.0, result, DELTA);
     }
 
     @Test

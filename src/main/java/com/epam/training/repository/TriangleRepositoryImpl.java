@@ -1,35 +1,34 @@
 package com.epam.training.repository;
 
-import com.epam.training.Parameters;
-import com.epam.training.TriangleObservable;
-import com.epam.training.comparator.IdComparator;
-import com.epam.training.geometry.Triangle;
-
+import com.epam.training.TriangleIdentifiable;
 import java.util.*;
 
 public class TriangleRepositoryImpl implements TriangleRepository {
 
-    private final Map<Integer, TriangleObservable> store = new HashMap<>();
+    private final Map<Integer, TriangleIdentifiable> store = new HashMap<>();
 
-    public void add(Triangle triangle) {
+    @Override
+    public void add(TriangleIdentifiable triangle) {
+        Integer id = triangle.getId();
+        store.put(id,triangle);
     }
 
     @Override
-    public void add(TriangleObservable triangle) {
+    public void delete(TriangleIdentifiable triangle) {
+        Integer id = triangle.getId();
+        store.remove(id,triangle);
     }
 
     @Override
-    public void delete(TriangleObservable triangle) {
+    public void update(TriangleIdentifiable triangle) {
+        Integer id = triangle.getId();
+        store.put(id, triangle);
     }
 
     @Override
-    public void update(TriangleObservable triangle) {
-    }
-
-    @Override
-    public List<TriangleObservable> query(final Specification specification) {
-        List<TriangleObservable> triangles = new ArrayList<>();
-        for (TriangleObservable triangle : triangles) {
+    public List<TriangleIdentifiable> query(final Specification specification) {
+        List<TriangleIdentifiable> triangles = new ArrayList<>();
+        for (TriangleIdentifiable triangle : store.values()) {
             if (specification.specified(triangle)) {
                 triangles.add(triangle);
             }
@@ -38,11 +37,9 @@ public class TriangleRepositoryImpl implements TriangleRepository {
     }
 
     @Override
-    public List<TriangleObservable> sort(Comparator<TriangleObservable> comparator) {
-        List<TriangleObservable> trianglesList = new ArrayList<TriangleObservable>(store.values());
+    public List<TriangleIdentifiable> sort(Comparator<TriangleIdentifiable> comparator) {
+        List<TriangleIdentifiable> trianglesList = new ArrayList<>(store.values());
         trianglesList.sort(comparator);
         return trianglesList;
     }
-
-
 }
